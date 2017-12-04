@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yaxi.tcphttp.TcpActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/host"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="server端IP地址" />
+        <EditText
+            android:id="@+id/port"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="server端端口"
+            android:inputType="number"
+            android:maxLength="4"/>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/request_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="需要发送的数据" />
+
+
+    <EditText
+        android:id="@+id/request_cycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="数据发送周期(ms)(0表示单次发送)"
+        android:inputType="number"
+        android:text="0"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送数据" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/show"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:text="Message From Server:"
+        android:textSize="14sp"
+        android:textColor="#000"
+        android:background="@drawable/border_rect"/>
+
+</LinearLayout>
